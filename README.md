@@ -22,15 +22,20 @@ warm, elegant visual identity.
 - Fully responsive, mobile-first layout
 - Sticky navigation with pure-CSS mobile menu
 - Full-screen hero section
-- Sections: Home, About (Chi sono), Services (Servizi), Portfolio, Contact
-- Horizontal swipe galleries (Spose, Cerimonie & eventi, Glam & sera, Lezioni)
+- Sections: Home, About (Chi sono), Services (Servizi), Portfolio, Reviews (Recensioni), Contact
+- Horizontal swipe galleries (Spose, Cerimonie & eventi, Glam & sera, Special Effects Makeup)
+- Client reviews from Google, with a "Guarda il look" button that opens the client's photos in a full-screen lightbox
 - Scroll-reveal animations (respect `prefers-reduced-motion`)
 - Fixed WhatsApp quick-contact bar + Instagram link
 
 ## Project structure
 
-The whole site currently lives in a single `index.html` file, with images
-embedded as base64 data URIs — so it works with zero external dependencies.
+The page lives in a single `index.html` file, with images embedded as base64
+data URIs. Next to it, at the site root, sit the static files it references:
+
+- `favicon.ico`, `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png` — site icons
+- `logo.png` — brand logo used in the structured data
+- `og-image.png` — preview image for links shared on social/messaging apps
 
 > Possible future improvement: extract images into a separate `/assets` folder
 > to reduce the HTML size and speed up loading.
@@ -42,8 +47,8 @@ tool such as the **Live Server** extension in VS Code.
 
 ## Deployment
 
-The site is deployed on Cloudflare. To publish an update, upload the new
-`index.html` from the Cloudflare dashboard (**Workers & Pages → New deployment**).
+The site is deployed on Cloudflare. To publish an update, upload `index.html`
+together with the static files listed above from the Cloudflare dashboard (**Workers & Pages → New deployment**).
 The domain and HTTPS certificate stay unchanged.
 
 ---
